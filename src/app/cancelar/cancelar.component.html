@@ -1,0 +1,111 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-header card-header-danger">
+                <h4 class="card-title">Ordenes De Gasto</h4>
+                <p class="card-category">
+                    Sistema para generar ordesnes de pagos ESPE.
+                </p>
+                <div class="row">
+                    <div class="subitem col-lg-6 rowup col-md-3 col-sm-3"></div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="card-body">
+                    <table class="table">
+                        <div class="col-12">
+                            <table class="table">
+                                <div class="col-12">
+                                    <form class="col s6">
+                                                <div class="col-12">
+                                                        <th>
+                                                                Tipo de Pago
+                                                                <select name="Tipo de pago" id="Tipo_contrato" class="form-control">
+                                                                    <option selected>Mensual fijo </option>
+                                                                    <option selected>Mensaul por Dia</option>
+                                                                    <option selected>100%</option>
+                                                                  </select>
+                                                                <div style="margin-left: 30px">
+                                                                </div>
+                                                                <div style="margin-left: 1px">
+                                                                </div>
+                                                            </th>
+                    
+                                                            <th>
+                                                                id_orden
+                                                                <input [(ngModel)]="ordenGasto.id_orden" type="number" id="Orden" name="Orden" min="1" pattern="^[0-9]+" 
+                                                                placeholder="Orden" mainlength="15" maxlength="100 " class="form-control" size="10" required />
+                    
+                                                                <th>
+
+                                                    <th>
+                                                        cantidad
+                                                        <input [(ngModel)]="ordenGasto.cantidad" type="number" id="Cantidad" name="Cantidad" min="1" pattern="^[0-9]+" 
+                                                        placeholder="Cantidad" mainlength="15" maxlength="100 " class="form-control" size="10" required />
+
+                                                    </th>
+
+                                                    <th>
+                                                       Saldo Inicial
+                                                        <input [(ngModel)]="ordenGasto.precioUnitario" type="number" id="PreUni" name="PreUni" min="1" pattern="^[0-9]+"
+                                                         placeholder="Precio Unitario" mainlength="15" maxlength="100 " class="form-control" size="10" required />
+
+                                                    </th>
+                                                    <div class="col-15">
+                                                   </div>
+
+                                                    <th>
+                                                        iva
+                                                        <input [(ngModel)]="ordenGasto.iva" type="number" id="Iva" name="Iva" placeholder="Iva  0.12" min="1" pattern="^[0-9]+"
+                                                         mainlength="15" maxlength="666" class="form-control" size="25" required />
+
+                                                    </th>
+
+                                                    <th>
+                                                        otros Impuestos
+                                                        <input [(ngModel)]="ordenGasto.otrosImpuestos" type="number" id="OtrImp" name="OtrImp"
+                                                         placeholder="Otros Impuestos" min="1" pattern="^[0-9]+" mainlength="15" maxlength="666" class="form-control" size="25" required />
+
+
+
+                                                        <th>
+                                                            descripcion
+                                                            <input [(ngModel)]="ordenGasto.descripcion" type="text" id="Descripcion" name="Descripcion" 
+                                                            placeholder="Descripcion" mainlength="15" maxlength="666" class="form-control" size="80" required />
+
+                                                        </th>
+
+                                                        <br>
+
+                                                        <th>
+                                                            <th>
+                                                                fecha Hora Inicio
+                                                                <input [(ngModel)]="ordenGasto.fechaHoraIni" type="datetime-local" id="horaFech" name="horaFech" 
+                                                                placeholder="Hora Fecha" mainlength="15" maxlength="666" class="form-control" size="25" required />
+
+                                                            </th>
+
+        
+
+                                                </div>
+                                    </form>
+                                    <button type="submit" class="btn btn-success" (click)="btnClickHome()" (click)="crearOActualizarOrdenGasto(ordenGasto)" >Guardar</button>
+                                    <button type="button" class="btn btn-danger" router-Link='/sidebar'>Cancelar </button>
+
+                                    <style type="text/css">
+                                        option {
+                                            font-family: Verdana, Arial;
+                                            font-size: 12px;
+                                            background-color: #e9e9e9;
+                                        }
+                                    </style>
+                                </div>
+                            </table>
+                        </div>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

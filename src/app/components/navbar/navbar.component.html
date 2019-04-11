@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-lg navbar-brand navbar-absolute navbar-fixed-top">
+    <div class="container-fluid">
+     <div class="navbar-wrapper">
+            <img src="/assets/img/LogoEspePay.png" alt="EspePay" width="230px">
+        </div> 
+        <button mat-raised-button class="navbar-toggler" type="button" (click)="sidebarToggle()">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navigation">
+   
+            <ul class="navbar-nav">
+   
+
+                <li class="nav-item dropdown text-primary">
+                    
+                          <button mat-raised-button class="form-control" routerLink="/login" >
+                            <i class="material-icons">person</i> Cerrara Sesion </button>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,195 @@
+
+<div class="container">
+    <div class="row">
+      <img class="avatar" src="../../assets/img/Espe-Angular-Logo.png" alt="logo-ESPE">
+    </div>
+  </div>
+  <div class="main-content">
+  
+    <div class="container-fluid">
+      <div class="card">
+        <div class="card-header card-header-danger">
+          <h4 class="card-title">Ordenes De Gasto</h4>
+          <p class="card-category">
+            Sistema para generar ordesnes de pagos ESPE.
+          </p>
+        </div>
+        <div class="card-body">
+          <div class="card-body">
+            <table class="table">
+              <div class="col-12">
+                <table class="table">
+                  <div class="col-12">
+                    <form action="registro" method="post" class="form-register" onsubmit="return validar();">
+                      <hr align="left" noshade="noshade" size="2" width="100%" />
+  
+                      <h5>SECCIÓN I - IDENTIFICACIÓN DE LA ORDEN DE GASTO</h5>
+                      <h6>
+                            <tr *ngFor="let ordenGasto of ordenGastos">
+                            
+                    <th>Numero de Contrato</th>
+                    <td> {{ ordenGasto.numero_contrato}}</td>
+
+                                
+                        <th>
+                          Fecha:
+                        </th>
+                     <td> {{ ordenGasto.fechaHoraIni}}</td>
+
+                      </h6>
+  
+                      <hr align="left" noshade="noshade" size="2" width="100%" />
+                      <tr *ngFor="let ordenGasto of ordenGastos">
+
+  
+                      <h5>SECCIÓN II - INFORMACIÓN DE LA CONTRATACIÓN</h5>
+                      <h6>
+                        <th>
+                          N°: Contrato/Orden de Compra/Contratación:
+                        </th>
+                        <td> {{ordenGasto.numero_contrato}}</td>
+
+                        <th>
+                          Objeto de la Contratación:
+                        </th>
+                        <td> {{ordenGasto.objeto_contrato}}</td>
+
+                      </h6>
+  
+                      <hr align="left" noshade="noshade" size="2" width="100%" />
+  
+                      <h5>SECCIÓN III - INFORMACIÓN DEL CONTRATISTA</h5>
+                      <h6>
+                        <th>
+                          Nombre:
+                        </th>
+                        <td> {{ordenGasto.nombreContratista}}</td>
+
+                        <th>
+                          Ruc:
+                        </th>
+                        <td> {{ordenGasto.ruc_contratista}}</td>
+
+                        <th>
+                          Mail:
+                        </th>
+                        <td> {{ordenGasto.email}}</td>
+
+                      </h6>
+  
+                      <hr align="left" noshade="noshade" size="2" width="100%" />
+  
+                      <small><h5>SECCIÓN IV - INFORMACIÓN DE LA FACTURA</h5>
+                      <h6>
+                        <th>
+                          ORD:
+                        </th>
+                    <td>{{ ordenGasto.numOrden }}</td>
+
+
+                        <th>
+                          DESCRIPCIÓN:
+                        </th>
+                        <td>{{ ordenGasto.descripcion }}</td>
+
+                        <th>
+                          CANTIDAD:
+                        </th>
+                        <td>{{ ordenGasto.cantidad }}</td>
+
+                        <th> 
+                          PRECIO UNITARIO: 
+                        </th>
+                        <td>{{ ordenGasto.precioUnitario }}</td>
+  
+                      <th>
+                        SUBTOTAL:
+                      </th>
+                      <td>{{ ordenGasto.subtotal }}</td>
+
+                      <th>
+                        IVA 12%:
+                      </th>
+                      <td>{{ ordenGasto.iva }}</td>
+  
+                      <th>
+                        OTROS IMPUESTOS:
+                      </th>
+                      <td>{{ ordenGasto.otrosImpuestos }}</td>
+  
+                      <th>
+                        TOTAL:
+                      </th>
+                      <td>{{ ordenGasto.total }}</td>
+
+                    </h6>
+                    </small>
+  
+  
+                      <hr align="left" noshade="noshade" size="2" width="100%" />
+  
+                      <h5>SECCIÓN V - INFORMACIÓN PRESUPUESTARIO PARA EL GASTO</h5>
+                      <h6>
+                        <th>
+                          CÓDIGO PRESUPUESTARIO:
+                     
+                        </th>
+                        <td>{{ ordenGasto.cod_presupuestario }}</td>
+
+  
+                        <th>
+                          DESCRIPCIÓN DEL ITEM PRESUPUESTARIO:
+                        </th>
+                        <td>{{ ordenGasto.descripcionpresupuestaria }}</td>
+
+  
+                        <th>
+                          VALOR CERTIFICACIÓN:
+                        </th>
+                        <td>{{ ordenGasto.valorCert }}</td>
+  
+                        <th>
+                          GASTOS A EFECTUAR:
+                        </th>
+                        <td>{{ ordenGasto.afectuar }}</td>
+  
+                        <th>
+                          SALDO:
+                        </th>
+                        <td>{{ ordenGasto.saldo }}</td>
+
+                      </h6>
+  
+                      <h6>
+                      </h6>
+  
+                      <hr align="left" noshade="noshade" size="2" width="100%" />
+  
+                      <div class="col-12">
+  
+                      </div>
+                      <h6> TOTAL DE LA ORDEN DE GASTO </h6>
+  
+                      <h5> SECCIÓN VI - FIRMAS DE RESPONSABILIDAD </h5>
+                      <button mat-raised-button class="btn btn-success" onclick="window.print();">
+                          <i class="material-icons">print&nbsp;</i>Imprimir Orden</button>
+                        <button mat-raisesd-button class="btn btn-danger"(click)="Editar(ordenGastos)" >editar</button>
+                        <button mat-raisesd-button value="Eliminar" title="Eliminar" class="btn btn-danger" (click)="Borrar(ordenGastos)">eliminar<i class="material-icons" >delete_sweep
+                          </i></button>
+                      <h6>
+
+
+
+                      </h6>
+                    </form>
+                  </div>
+
+                </table>
+              </div>
+            </table>
+          
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
